@@ -8,17 +8,17 @@
 #include <sstream>
 
 
-
+/*
 template <typename T=std::string>
 auto input(){
     std::string value;
     std::getline(std::cin,value);
     return value;
-}
+}*/
 
 
 template <typename T=std::string>
-auto input(std::string mensaje){
+auto input(std::string mensaje = ""){
     std::cout << mensaje;
     T value;
     std::cin >> value;

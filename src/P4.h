@@ -34,7 +34,7 @@ public:
         ptr = new T;
         *ptr = val;
     };
-    smart_ptr(int x, int y){
+    smart_ptr(int  x, int y){
 
         ptr = new T(x,y);
     }
@@ -56,8 +56,8 @@ smart_ptr<T> make_smart_ptr(T2 value){
 }
 
 template < typename T, typename ... T2>
-smart_ptr<T> make_smart_ptr(T2... args){
-    smart_ptr<T> ptr(args...);
+smart_ptr<T> make_smart_ptr(T2 ...arg){
+    smart_ptr<T> ptr( arg...);
     return ptr;
 }
 
